@@ -91,7 +91,12 @@ public class nhanVien extends javax.swing.JFrame {
 
         jLabel4.setText("Vai trò");
 
-        rdoTruongPhong.setText("Trưởng phòng");
+        rdoTruongPhong.setText("Quản lý");
+        rdoTruongPhong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdoTruongPhongActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Mã nhân viên");
 
@@ -264,7 +269,7 @@ public class nhanVien extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tabs, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+                    .addComponent(tabs)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -276,7 +281,7 @@ public class nhanVien extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tabs, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
+                .addComponent(tabs)
                 .addContainerGap())
         );
 
@@ -330,6 +335,10 @@ public class nhanVien extends javax.swing.JFrame {
             this.edit();
         }
     }//GEN-LAST:event_tblNhanVienMouseClicked
+
+    private void rdoTruongPhongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoTruongPhongActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdoTruongPhongActionPerformed
 
     /**
      * @param args the command line arguments
