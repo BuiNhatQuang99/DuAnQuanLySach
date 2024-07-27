@@ -6,7 +6,7 @@ package com.mycompany.quanlysach;
 
 /**
  *
- * @author PC
+ * @author quang
  */
 public class giaodienchinh extends javax.swing.JFrame {
 
