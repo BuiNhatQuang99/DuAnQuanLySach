@@ -3,69 +3,63 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Dao;
-
 import utils.XJdbc;
-import entiTy.nhaVien;
+import entiTy.quanLy;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  *
  * @author ACER
  */
-public class nhanVienDao {
-
-    public void insert(nhaVien model) {
-        String sql = "INSERT INTO NhanVien (idNhanvien, idQuanly,matKhau, sDT, diaChi) VALUES (?, ?, ?, ?, ?)";
+public class quanLyDao {
+    public void insert(quanLy model) {
+        String sql = "INSERT INTO QuanLy (idQuanly, matKhau, diaChi, sDT) VALUES (?, ?, ?, ?)";
         XJdbc.update(sql,
-                model.getIdNhanvien(),
                 model.getIdQuanly(),
                 model.getMatKhau(),
-                model.getsDT(),
-                model.getDiaChi());
+                model.getDiaChi(),
+                model.getsDT());
     }
 
-    public void update(nhaVien model) {
-        String sql = "UPDATE HoaDon SET idNhanvien=?, idQuanly=?, matKhau=?, sDT=?, diaChi=? WHERE idNhanvien=?";
+    public void update(quanLy model) {
+        String sql = "UPDATE Quanly SET idQuanly=?, matKhau=?, diaChi=?, sDT=? WHERE idQuanly=?";
         XJdbc.update(sql,
-                model.getIdNhanvien(),
                 model.getIdQuanly(),
                 model.getMatKhau(),
-                model.getsDT(),
-                model.getDiaChi());
+                model.getDiaChi(),
+                model.getsDT());
     }
 
-    public void delete(String idnhanVien) {
-        String sql = "DELETE FROM NhanVien WHERE idNhanvien=?";
-        XJdbc.update(sql, idnhanVien);
+    public void delete(String idquanly) {
+        String sql = "DELETE FROM QuanLy WHERE idQuanly=?";
+        XJdbc.update(sql, idquanly);
     }
 
-    public List<nhaVien> selectAll() {
-        String sql = "SELECT * FROM NhanVien";
+    public List<quanLy> selectAll() {
+        String sql = "SELECT * FROM QuanLy";
         return selectBySql(sql);
     }
 
-    public nhaVien selectById(String idnhanvien) {
-        String sql = "SELECT * FROM ChuyenDe WHERE idHoadon=?";
-        List<nhaVien> list = selectBySql(sql, idnhanvien);
+    public quanLy selectById(String idquanly) {
+        String sql = "SELECT * FROM QuanLy WHERE idQuanly=?";
+        List<quanLy> list = selectBySql(sql, idquanly);
         return list.size() > 0 ? list.get(0) : null;
     }
 
-    protected List<nhaVien> selectBySql(String sql, Object... args) {
-        List<nhaVien> list = new ArrayList<>();
+    protected List<quanLy> selectBySql(String sql, Object... args) {
+        List<quanLy> list = new ArrayList<>();
         try {
             ResultSet rs = null;
             try {
                 rs = XJdbc.query(sql, args);
                 while (rs.next()) {
-                    nhaVien entity = new nhaVien();
-                    entity.setIdNhanvien(rs.getString("idNhanvien"));
+                    quanLy entity = new quanLy();
                     entity.setIdQuanly(rs.getString("idQuanly"));
                     entity.setMatKhau(rs.getString("matKhau"));
-                    entity.setsDT(rs.getString("sDT"));
                     entity.setDiaChi(rs.getString("diaChi"));
+                    entity.setsDT(rs.getString("sDT"));
                     list.add(entity);
                 }
             } finally {

@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class hoaDonDao{
     public void insert(hoaDon model){
-        String sql="INSERT INTO ChuyenDe (idHoadon, idKhachhang,idNhanvien, ngayBan,tongTien) VALUES (?, ?, ?, ?, ?)";
+        String sql="INSERT INTO HoaDon (idHoadon, idKhachhang,idNhanvien, ngayBan,tongTien) VALUES (?, ?, ?, ?, ?)";
         XJdbc.update(sql, 
                 model.getIdHoaDon(), 
                 model.getIdKhachHang(), 
