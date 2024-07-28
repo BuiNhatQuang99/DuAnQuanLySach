@@ -13,13 +13,11 @@ entiTy\quanLy.class
 Dao\sachDao.class
 com\mycompany\quanlysach\dangNhap$3.class
 entiTy\sach.class
-com\mycompany\quanlysach\ChaoJDialog$1.class
 com\mycompany\quanlysach\doiMK$1.class
 com\mycompany\quanlysach\nhanVien$5.class
 com\mycompany\quanlysach\DangKy$2.class
 com\mycompany\quanlysach\nhanVien$10.class
 com\mycompany\quanlysach\nhanVien$2.class
-com\mycompany\quanlysach\ChaoJDialog.class
 com\mycompany\quanlysach\dangNhap$1.class
 com\mycompany\quanlysach\giaodienchinh$6.class
 com\mycompany\quanlysach\menu$1.class
