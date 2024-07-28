@@ -8,6 +8,7 @@ import Dao.nhanVienDao;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ACER
@@ -20,6 +21,7 @@ public class dangNhap extends javax.swing.JFrame implements ActionListener{
     public dangNhap() {
         initComponents();
         this.btn_regicter.addActionListener(this);
+        this.btnlogin.addActionListener(this);
     }
 
     /**
@@ -240,6 +242,13 @@ public class dangNhap extends javax.swing.JFrame implements ActionListener{
             setVisible(false);
             System.out.println("Click");
             return;
-        }          
+        } 
+        if(e.getSource().equals(this.btnlogin)){
+             giaodienchinh ui = new giaodienchinh();
+            ui.setVisible(true);
+            setVisible(false);
+//            JOptionPane.showMessageDialog(this, "Đăng nhập thành công");
+            return;
+        } 
     }
 }

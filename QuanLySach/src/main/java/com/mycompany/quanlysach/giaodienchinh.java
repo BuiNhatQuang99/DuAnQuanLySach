@@ -5,13 +5,15 @@
 package com.mycompany.quanlysach;
 import Dao.hoaDonChiTietDao;
 import Dao.hoaDonDao;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 /**
  *
  * @author PC
  */
-public class giaodienchinh extends javax.swing.JFrame {
+public class giaodienchinh extends javax.swing.JFrame implements ActionListener{
 
     private int row;
 
@@ -1512,6 +1514,11 @@ public class giaodienchinh extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void edit() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
