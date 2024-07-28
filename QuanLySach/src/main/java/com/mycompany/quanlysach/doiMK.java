@@ -118,12 +118,10 @@ public class doiMK extends javax.swing.JFrame {
 
     private void btnDoiMatKhauActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoiMatKhauActionPerformed
         // TODO add your handling code here:
-        this.doiMatKhau();
     }//GEN-LAST:event_btnDoiMatKhauActionPerformed
 
     private void btnHuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHuyActionPerformed
         // TODO add your handling code here:
-        this.huyBo();
     }//GEN-LAST:event_btnHuyActionPerformed
 
     /**

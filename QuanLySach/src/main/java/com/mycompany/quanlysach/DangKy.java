@@ -4,17 +4,22 @@
  */
 package com.mycompany.quanlysach;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author PC
  */
-public class DangKy extends javax.swing.JFrame {
+public class DangKy extends javax.swing.JFrame implements ActionListener{
 
     /**
      * Creates new form DangKy
      */
     public DangKy() {
         initComponents();
+        this.btn_login.addActionListener(this);
+        
     }
 
     /**
@@ -46,7 +51,7 @@ public class DangKy extends javax.swing.JFrame {
         jComboBox4 = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btn_login = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         jTextField2.setText("jTextField2");
@@ -105,10 +110,10 @@ public class DangKy extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Đăng Ký");
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 0, 0));
-        jButton2.setText("Đăng Nhập");
+        btn_login.setBackground(new java.awt.Color(204, 204, 204));
+        btn_login.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_login.setForeground(new java.awt.Color(255, 0, 0));
+        btn_login.setText("Đăng Nhập");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Giới Tính");
@@ -138,7 +143,7 @@ public class DangKy extends javax.swing.JFrame {
                                         .addGap(48, 48, 48)
                                         .addComponent(jButton1)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton2))
+                                        .addComponent(btn_login))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -200,7 +205,7 @@ public class DangKy extends javax.swing.JFrame {
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btn_login))
                 .addGap(0, 69, Short.MAX_VALUE))
         );
 
@@ -210,7 +215,7 @@ public class DangKy extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(129, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(110, 110, 110))
         );
         layout.setVerticalGroup(
@@ -268,10 +273,10 @@ public class DangKy extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_login;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -291,4 +296,15 @@ public class DangKy extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+            if (e.getSource().equals(this.btn_login)) {
+            dangNhap dangnhap = new dangNhap();
+            dangnhap.setVisible(true);
+            setVisible(false);
+            System.out.println("Click");
+            return;
+        }        
+    }
 }
