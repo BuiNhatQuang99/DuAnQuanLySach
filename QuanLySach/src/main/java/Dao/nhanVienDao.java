@@ -48,7 +48,7 @@ public class nhanVienDao {
     }
 
     public nhaVien selectById(String idnhanvien) {
-        String sql = "SELECT * FROM ChuyenDe WHERE idHoadon=?";
+        String sql = "SELECT * FROM ChuyenDe WHERE idnhanvien=?";
         List<nhaVien> list = selectBySql(sql, idnhanvien);
         return list.size() > 0 ? list.get(0) : null;
     }
