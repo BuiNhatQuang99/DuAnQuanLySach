@@ -5,17 +5,21 @@
 package com.mycompany.quanlysach;
 import Dao.quanLyDao;
 import Dao.nhanVienDao;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 /**
  *
  * @author ACER
  */
-public class dangNhap extends javax.swing.JFrame {
+public class dangNhap extends javax.swing.JFrame implements ActionListener{
 
     /**
      * Creates new form login_register
      */
     public dangNhap() {
         initComponents();
+        this.btn_regicter.addActionListener(this);
     }
 
     /**
@@ -36,13 +40,19 @@ public class dangNhap extends javax.swing.JFrame {
         cbquenmk = new javax.swing.JCheckBox();
         btnlogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_regicter = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        edtname_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edtname_loginActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Tên đăng nhập:");
@@ -98,9 +108,14 @@ public class dangNhap extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("Đăng Nhập");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 51, 51));
-        jButton1.setText("Đăng Ký");
+        btn_regicter.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_regicter.setForeground(new java.awt.Color(255, 51, 51));
+        btn_regicter.setText("Đăng Ký");
+        btn_regicter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_regicterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -115,11 +130,11 @@ public class dangNhap extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(btnlogin)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_regicter, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(97, 97, 97))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 75, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -135,7 +150,7 @@ public class dangNhap extends javax.swing.JFrame {
                         .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                        .addComponent(btn_regicter, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
                         .addGap(44, 44, 44))))
         );
 
@@ -157,6 +172,16 @@ public class dangNhap extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_btnloginActionPerformed
+
+    private void edtname_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtname_loginActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_edtname_loginActionPerformed
+
+    private void btn_regicterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_regicterActionPerformed
+        // TODO add your handling code here
+        
+    }//GEN-LAST:event_btn_regicterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,15 +220,26 @@ public class dangNhap extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_regicter;
     private javax.swing.JButton btnlogin;
     private javax.swing.JCheckBox cbquenmk;
     private javax.swing.JTextField edtname_login;
     private javax.swing.JPasswordField edtpassword;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+         if (e.getSource().equals(this.btn_regicter)) {
+            DangKy dangky = new DangKy();
+            dangky.setVisible(true);
+            setVisible(false);
+            System.out.println("Click");
+            return;
+        }          
+    }
 }
