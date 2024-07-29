@@ -163,7 +163,7 @@
                               <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="110" max="32767" attributes="0"/>
+                      <EmptySpace pref="105" max="32767" attributes="0"/>
                       <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -334,6 +334,11 @@
                           </Group>
                           <EmptySpace pref="49" max="32767" attributes="0"/>
                       </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButton2" min="-2" pref="133" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -378,6 +383,8 @@
                               <Component id="jLabel85" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField19" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="jButton2" min="-2" pref="41" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -461,6 +468,14 @@
                 <Component class="javax.swing.JTextField" name="jTextField18">
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField19">
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="99" green="ff" red="99" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="X&#xe1;c nh&#x1ead;n"/>
+                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
